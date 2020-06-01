@@ -8,7 +8,6 @@ def get_loader(config):
     transform = transforms.Compose([
                     transforms.Scale(config.image_size),
                     transforms.ToTensor(),
-
                     transforms.Normalize((0.1307,), (0.3081,))])
     
     svhn = datasets.SVHN(root=config.svhn_path, download=True, transform=transform)

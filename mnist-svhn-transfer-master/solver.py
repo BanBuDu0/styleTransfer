@@ -195,8 +195,8 @@ class Solver(object):
             if (step+1) % self.log_step == 0:
                 print('Step [%d/%d], d_real_loss: %.4f, d_mnist_loss: %.4f, d_svhn_loss: %.4f, '
                       'd_fake_loss: %.4f, g_loss: %.4f' 
-                      %(step+1, self.train_iters, d_real_loss.item(), d_mnist_loss.item(),
-                        d_svhn_loss.item(), d_fake_loss.item(), g_loss.item()))
+                      %(step+1, self.train_iters, d_real_loss.data[0], d_mnist_loss.data[0], 
+                        d_svhn_loss.data[0], d_fake_loss.data[0], g_loss.data[0]))
 
             # save the sampled images
             if (step+1) % self.sample_step == 0:

@@ -3,7 +3,6 @@ import os
 from solver import Solver
 from torch.backends import cudnn
 from data_loader import get_loader
-import dill
 
 def str2bool(v):
     return v.lower() in ('true')
@@ -33,8 +32,8 @@ if __name__ == '__main__':
     parser.add_argument('--image_size', type=int, default=32)
     parser.add_argument('--g_conv_dim', type=int, default=64)
     parser.add_argument('--d_conv_dim', type=int, default=64)
-    parser.add_argument('--use_reconst_loss', type=str2bool)
-    parser.add_argument('--use_labels', type=str2bool)
+    parser.add_argument('--use_reconst_loss', required=True, type=str2bool)
+    parser.add_argument('--use_labels', required=True, type=str2bool)
     parser.add_argument('--num_classes', type=int, default=10)
     
     # training hyper-parameters
