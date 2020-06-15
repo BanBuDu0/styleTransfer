@@ -1,0 +1,38 @@
+%% Bachelor Thesis Template of Wuhan Uniersity
+%%
+%% Created by Fing
+
+\documentclass[]{WHUBachelor}
+
+\begin{document}
+%%----------- 封面部分 ----------- %%
+  \stunum{xxxxxxxxxxxxx}
+  \ctitle{深度学习作业报告}
+  \cschool{计算机学院}
+  \cmajor{软件工程}
+  \cauthor{黄庆}
+  \cadvisor{191050080}
+  \cdate{二〇二〇年六月}
+
+  \maketitlepage            % 封面
+  
+%%----------- 前言部分 ----------- %%
+  \include{pages/abstract}  % 摘要
+  \contents                 % 目录
+
+%%----------- 主体部分 ----------- %%
+  \include{pages/chapter1}
+  \include{pages/chapter2}
+  \include{pages/chapter3}
+  \include{pages/chapter4}
+
+%%----------- 结尾部分 ----------- %%
+  \clearpage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{参考文献}
+  \bibliography{ref/refs}   % 参考文献
+
+  \include{pages/thanks}    % 致谢
+  \include{pages/appendix}  % 附录
+
+\end{document}
